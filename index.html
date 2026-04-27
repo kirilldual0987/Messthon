@@ -28,14 +28,16 @@
       --border-radius:16px;
       --transition:all .28s ease;
       --shadow:0 18px 45px rgba(0,0,0,.35);
+      --glow:0 0 18px rgba(61,174,233,.35), 0 0 42px rgba(61,174,233,.14);
     }
     *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;}
     html{scroll-behavior:smooth;}
     body{
       background:
-        radial-gradient(circle at top left, rgba(61,174,233,.14), transparent 26%),
-        radial-gradient(circle at 85% 10%, rgba(155,89,182,.15), transparent 24%),
-        radial-gradient(circle at 30% 80%, rgba(22,160,133,.12), transparent 26%),
+        radial-gradient(circle at top left, rgba(61,174,233,.22), transparent 26%),
+        radial-gradient(circle at 85% 10%, rgba(155,89,182,.20), transparent 24%),
+        radial-gradient(circle at 30% 80%, rgba(22,160,133,.16), transparent 26%),
+        radial-gradient(circle at 50% 0%, rgba(255,255,255,.05), transparent 18%),
         var(--bg-primary);
       color:var(--text-primary);
       line-height:1.6;
@@ -74,7 +76,7 @@
   background:rgba(61,174,233,.12);border:1px solid rgba(61,174,233,.22);
   color:#cfeeff;font-size:.92rem;margin-bottom:16px;
 }
-h1{font-size:clamp(2.4rem,5vw,4.6rem);line-height:1.03;margin-bottom:16px;letter-spacing:-.04em;}
+h1{font-size:clamp(2.4rem,5vw,4.8rem);line-height:1.02;margin-bottom:16px;letter-spacing:-.05em;text-shadow:var(--glow);}
 .hero p{color:var(--text-secondary);font-size:1.08rem;max-width:64ch;margin-bottom:24px;}
 .actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px;}
 .btn{
@@ -126,7 +128,7 @@ h1{font-size:clamp(2.4rem,5vw,4.6rem);line-height:1.03;margin-bottom:16px;letter
 .pill{padding:8px 10px;border-radius:999px;background:rgba(61,174,233,.12);border:1px solid rgba(61,174,233,.16);font-size:.84rem;color:#d8f0ff;}
 
 section{padding:54px 0;}
-.section-title{font-size:2rem;margin-bottom:10px;letter-spacing:-.03em;}
+.section-title{font-size:2rem;margin-bottom:10px;letter-spacing:-.03em;text-shadow:0 0 14px rgba(61,174,233,.18);}
 .section-subtitle{color:var(--text-secondary);max-width:76ch;margin-bottom:22px;}
 .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
 .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;}
@@ -232,17 +234,16 @@ footer{padding:28px 0 46px;color:var(--text-secondary);}
   </header>  <main id="top" class="hero">
     <div class="container hero-grid">
       <div>
-        <div class="eyebrow">⚡ Поддерживается той же командой, что и Runget</div>
-        <h1>Messthon — единый мессенджер на Python без лишних ограничений</h1>
+        <div class="eyebrow">Neon messenger interface built for clarity and speed</div>
+        <h1>Messthon — неоновый центр общения, где все чаты сходятся в одном месте</h1>
         <p>
           Messthon (Messenger on Python) — это открытый настольный мессенджер на <strong>Python</strong> с использованием <strong>PyQt</strong>,
-          созданный разработчиком <strong>Kolyadual</strong>. Идея проекта — собрать самые популярные каналы общения в одном окне:
-          от Telegram, WhatsApp и Discord до Tox, Matrix и других сервисов, чтобы не держать десятки отдельных приложений.
+          созданный разработчиком <strong>Kolyadual</strong>. Он превращает разрозненные чаты в единый сияющий интерфейс:
+          Telegram, WhatsApp, Discord, Tox, Matrix и другие сервисы собираются в одном клиенте, без визуального шума и без постоянного прыжка между приложениями.
         </p>
         <p>
-          Messthon нужен тем, кто хочет один удобный клиент для всей переписки: без лишнего переключения между программами,
-          без закрытой логики и без ощущения, что каждый сервис живёт отдельно. Это проект про комфорт, прозрачность и контроль
-          над своим общением.
+          Messthon нужен тем, кто хочет один мощный клиент для всей переписки: минимум отвлекающих действий, максимум контроля,
+          прозрачный open-source подход и ощущение, что всё общение собрано в одном чистом, современном и по-настоящему ярком пространстве.
         </p>
         <div class="badge-row">
           <span class="badge accent">Open Source</span>
@@ -297,28 +298,28 @@ footer{padding:28px 0 46px;color:var(--text-secondary);}
 
   </main>  <section id="about">
     <div class="container">
-      <h2 class="section-title">О проекте</h2>
+      <h2 class="section-title">Что такое Messthon</h2>
       <p class="section-subtitle">
-        Messthon — это не просто ещё один мессенджер, а попытка собрать разрозненное общение в один понятный рабочий инструмент.
-        Он делает упор на открытость, удобство и единый интерфейс для всех чатов.
+        Messthon — это не просто ещё один мессенджер, а единый диспетчер общения. Он объединяет ваши сервисы в один современный интерфейс,
+        где всё выглядит собранно, быстро и эффектно.
       </p>
       <div class="grid-3">
         <article class="card">
-          <div class="icon">💬</div>
+          <div class="icon">01</div>
           <h3>Что такое Messthon</h3>
           <p>Это единый клиент, который объединяет разные платформы общения в одном приложении, чтобы переписка не распадалась по десяткам окон.</p>
           <span class="tagline">Один интерфейс</span>
         </article>
         <article class="card">
-          <div class="icon">🧠</div>
+          <div class="icon">02</div>
           <h3>Почему он существует</h3>
           <p>Чтобы упростить повседневное общение: меньше переключений, меньше хаоса, больше контроля над диалогами и рабочими чатами.</p>
           <span class="tagline">Больше порядка</span>
         </article>
         <article class="card">
-          <div class="icon">🔓</div>
+          <div class="icon">03</div>
           <h3>Какая у него философия</h3>
-          <p>Открытый код, прозрачная разработка и акцент на приватности вместо закрытых решений, которые собирают данные и навязывают ограничения.</p>
+          <p>Открытый код, прозрачная разработка и акцент на приватности вместо закрытых решений, которые собирают данные и навязывают ограничения. Всё прозрачно, без тумана и скрытых слоёв.</p>
           <span class="tagline">Open source</span>
         </article>
       </div>
@@ -328,11 +329,11 @@ footer{padding:28px 0 46px;color:var(--text-secondary);}
       <h2 class="section-title">Зачем нужен Messthon</h2>
       <p class="section-subtitle">
         Современное общение часто растянуто между разными приложениями: работа в одном месте, друзья в другом, команды и сообщества — в третьем.
-        Messthon создан, чтобы убрать этот разрыв и дать единое рабочее пространство для всей коммуникации.
+        Messthon создан, чтобы убрать этот разрыв и дать единое яркое пространство для всей коммуникации.
       </p>
       <div class="grid-2">
         <article class="card">
-          <div class="icon">📥</div>
+          <div class="icon">04</div>
           <h3>Чтобы собрать всё в одном месте</h3>
           <p>
             Когда сообщения приходят из разных сервисов, легко потерять важный диалог или забыть, где именно был нужный контакт.
@@ -340,7 +341,7 @@ footer{padding:28px 0 46px;color:var(--text-secondary);}
           </p>
         </article>
         <article class="card">
-          <div class="icon">🧭</div>
+          <div class="icon">05</div>
           <h3>Чтобы снизить цифровой шум</h3>
           <p>
             Вместо постоянного переключения между окнами и лишних уведомлений пользователь получает более спокойную и структурированную среду,
@@ -348,7 +349,7 @@ footer{padding:28px 0 46px;color:var(--text-secondary);}
           </p>
         </article>
         <article class="card">
-          <div class="icon">🔐</div>
+          <div class="icon">06</div>
           <h3>Чтобы сохранить приватность</h3>
           <p>
             Проект подаётся как открытая альтернатива закрытым решениям: без скрытого сбора данных, с прозрачной архитектурой
@@ -356,7 +357,7 @@ footer{padding:28px 0 46px;color:var(--text-secondary);}
           </p>
         </article>
         <article class="card">
-          <div class="icon">⚡</div>
+          <div class="icon">07</div>
           <h3>Чтобы работать быстрее</h3>
           <p>
             Messthon задуман как лёгкий desktop-клиент, который не перегружает пользователя лишними слоями и даёт быстрый доступ
@@ -369,8 +370,8 @@ footer{padding:28px 0 46px;color:var(--text-secondary);}
     <div class="container">
       <h2 class="section-title">Что умеет Messthon</h2>
       <p class="section-subtitle">
-        Сайт подан в стиле Runget-проектов: тёмная неоновая тема, крупные заголовки и карточки с акцентами.
-        Но содержание полностью переработано под Messthon.
+        Тёмная неоновая тема, яркие акценты, чистые карточки и ощущение технологичного будущего.
+        Здесь стиль работает не ради декора, а ради впечатления и читабельности.
       </p>
       <div class="feature-list">
         <div class="feature"><div class="mini">1</div><div><h4>Telegram, WhatsApp, Discord и другие</h4><p>Объединение популярных платформ общения в одном клиенте.</p></div></div>
@@ -387,22 +388,22 @@ footer{padding:28px 0 46px;color:var(--text-secondary);}
       <p class="section-subtitle">Коротко о том, на чём строится Messthon и почему он отличается от закрытых решений.</p>
       <div class="grid-2">
         <article class="card">
-          <div class="icon">🛡️</div>
+          <div class="icon">08</div>
           <h3>Приватность</h3>
           <p>Проект позиционируется как открытый и не ориентированный на скрытый сбор пользовательских данных.</p>
         </article>
         <article class="card">
-          <div class="icon">🌐</div>
+          <div class="icon">09</div>
           <h3>Универсальность</h3>
           <p>Цель Messthon — стать единым клиентом для многих платформ общения, а не очередным закрытым мессенджером.</p>
         </article>
         <article class="card">
-          <div class="icon">🚀</div>
+          <div class="icon">10</div>
           <h3>Скорость и удобство</h3>
           <p>Интерфейс должен оставаться лёгким, отзывчивым и не перегруженным лишними слоями.</p>
         </article>
         <article class="card">
-          <div class="icon">🧩</div>
+          <div class="icon">11</div>
           <h3>Расширяемость</h3>
           <p>Python-основа упрощает добавление новых интеграций и функций по мере развития проекта.</p>
         </article>
@@ -481,7 +482,7 @@ footer{padding:28px 0 46px;color:var(--text-secondary);}
         <div style="font-weight:800;color:var(--text-primary);">Messthon</div>
         <div class="small">Messenger on Python • Kolyadual • Open Source</div>
       </div>
-      <div class="small">© Messthon. Дизайн в стиле тёмных Runget-страниц, контент адаптирован под новый проект.</div>
+      <div class="small">© Messthon. Неоновый стиль, открытая идея и единый центр общения.</div>
     </div>
   </footer>  <script>
     const menuBtn = document.getElementById('menuBtn');
